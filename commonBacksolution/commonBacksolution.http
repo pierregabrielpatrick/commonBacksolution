@@ -1,0 +1,6 @@
+@commonBacksolution_HostAddress = http://localhost:5246
+
+GET {{commonBacksolution_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

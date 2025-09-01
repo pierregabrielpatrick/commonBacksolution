@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace Dal.configs
 {
-    public class DeviceCategory
+    internal class HouseModelConfig
     {
-        public int CategoryId { get; set; }
-        public string Name { get; set; }
     }
 }

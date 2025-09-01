@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Bll.houseService;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace commonBacksolution.Controllers
@@ -7,12 +8,19 @@ namespace commonBacksolution.Controllers
     [ApiController]
     public class HouseIOTController : ControllerBase
     {
+        private readonly IHouseService service;
+
+        public HouseIOTController(IHouseService service)
+        {
+            this.service = service;
+        }
 
         [HttpGet]           
-        public ActionResult GetHouses() {
+        public IActionResult GetHouses() {
         
+            var houses = service.GetAllHouses();
 
-            return Ok();
+            return Ok(houses);
         }
     }
 }

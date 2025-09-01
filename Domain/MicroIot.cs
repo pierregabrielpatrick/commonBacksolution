@@ -1,8 +1,8 @@
 ﻿namespace Domain
 {
-    public class MicroIotDevice
+    public class MicroDevice
     {
-        public int DeviceIotId { get; set; }
+        public int DeviceId { get; set; }
         
         public int DeviceOwnerId { get; set; }
         public int DeviceNumericValue { get; set; }
